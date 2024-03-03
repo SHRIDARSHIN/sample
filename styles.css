@@ -1,0 +1,80 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: pink;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative; 
+}
+
+.container {
+    position: relative;
+    padding-top: 100px;
+}
+
+.popper-left, .popper-right {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: pink;
+    animation: pop 1s infinite alternate;
+}
+
+.popper-left {
+    left: 0;
+}
+
+.popper-right {
+    right: 0;
+}
+
+@keyframes pop {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.top-left-paragraph {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.bottom-right-paragraph {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.kiss-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    animation: kiss 2s infinite;
+}
+
+@keyframes kiss {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
